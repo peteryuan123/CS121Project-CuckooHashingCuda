@@ -1,10 +1,10 @@
 -----------------Experiment4 Start-----------------
-[Bound 1]serial_time:7.72246 cuda_time:0.332297
-[Bound 2]serial_time:10.7773 cuda_time:0.352912
-[Bound 3]serial_time:15.4171 cuda_time:0.460021
-[Bound 4]serial_time:16.8679 cuda_time:0.54441
-[Bound 5]serial_time:18.5872 cuda_time:0.661407
-[Bound 6]serial_time:20.9813 cuda_time:0.772323
-[Bound 7]serial_time:23.6915 cuda_time:0.818768
-[Bound 8]serial_time:24.6369 cuda_time:0.910556
-[Bound 9]serial_time:65.7022 cuda_time:1.24789
+[Bound 1]serial_time:7.63564 cuda_time:0.347246
+[Bound 2]serial_time:9.97331 cuda_time:0.349837
+[Bound 3]serial_time:13.2511 cuda_time:0.425876
+[Bound 4]serial_time:15.015 cuda_time:0.5171
+[Bound 5]serial_time:18.3182 cuda_time:0.616897
+[Bound 6]serial_time:19.686 cuda_time:0.702428
+[Bound 7]serial_time:22.0326 cuda_time:0.803347
+[Bound 8]serial_time:23.6174 cuda_time:1.16483
+[Bound 9]serial_time:26.3266 cuda_time:0.976644

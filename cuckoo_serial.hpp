@@ -32,6 +32,7 @@ private:
     uint _eviction_bound;     // When the chain's length reaches evication bound, rebuid the hash table
     uint32_t _prime = 50331653;
 
+
 private:
 
     void rebuild_table(uint32_t key);
@@ -59,7 +60,7 @@ private:
  
 
 public:
-
+    //uint a = 0;
     cuckoo_serial(const uint size, uint num_func, uint evivtion_bound);
     ~cuckoo_serial();
 
@@ -136,11 +137,11 @@ void cuckoo_serial::insert(uint32_t key)
 
         chain_count++;
     }
-
+    //a += 1;
     // Since no rehash, we give a penalty if it needs rehash
-    int penalty = 0;
-    while (penalty < 400)
-        penalty++;
+    // int penalty = 0;
+    // while (penalty < 400)
+    //     penalty++;
     //std::cout << chain_count << std::endl;
     //rebuild_table(key);
 

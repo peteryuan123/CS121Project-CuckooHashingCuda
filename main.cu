@@ -71,6 +71,7 @@ int main(int argc, char* argv[])
                     steady_clock::time_point s_start = steady_clock::now();
                     for (int i = 0; i < size; i++)
                         hash_serial.insert(S[i]);
+                    //std::cout << hash_serial.a << std::endl;
                     steady_clock::time_point s_end = steady_clock::now();
                     duration<double> serial_time = duration_cast<duration<double>>(s_end - s_start);
 
