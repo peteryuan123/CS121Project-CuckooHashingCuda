@@ -4,6 +4,7 @@
 #include<iostream>
 #include"util.h"
 
+#define BLOCK_SIZE 512
 
 __device__ uint32_t 
 compress_data(uint32_t key, uint func_index)
@@ -29,7 +30,20 @@ hash_func(uint32_t key, para parameter, uint32_t prime, uint size)
     //return ((key ^ parameter.a) >> parameter.b) % _size;
     return ((key * parameter.a + parameter.b) % prime) % size ;
 }
+__global__ void
+InsertKernel(uint32_t *keys, int n, uint32_t* table, 
+            para *hash_func_param, uint eviction_bound,
+            uint32_t prime, uint size, uint num_func );
 
+__global__ void
+LookupKernel(uint32_t *keys, int n, uint32_t* table, 
+            para *hash_func_param, uint32_t prime,
+            uint size, uint num_func,  bool *result);
+
+__global__ void
+DeleteKernel(uint32_t *keys, int n, uint32_t* table, 
+            para *hash_func_param, uint32_t prime,
+            uint size, uint num_func);
 
 class cuckoo_cuda
 {
@@ -77,22 +91,105 @@ public:
     cuckoo_cuda(const uint size,uint num_func);
     ~cuckoo_cuda();
 
-    void insert(uint32_t key);
-    bool remove(uint32_t key);
-    bool look_up(uint32_t key);
+    void insert(uint32_t *key, int n);
+    void remove(uint32_t *key, int n);
+    void look_up(uint32_t *key, int n, bool *result);
     void show_table();
 };
+
+
+
 
 cuckoo_cuda::cuckoo_cuda(const uint size, uint num_func): _size(size), _num_func(num_func)
 {
     _hash_func_param = new para[num_func];
-    table = new uint32_t[size];
+    _table = new uint32_t[size];
     gen_hash_divisor();
-    _eviction_bound = 4 * ceil(log2(size));
+    _eviction_bound = 10 * ceil(log2(size));
+}
+
+cuckoo_cuda::~cuckoo_cuda()
+{
+    delete[] _hash_func_param;
+    delete[] _table;
+}
+
+void cuckoo_cuda::insert(uint32_t *key, int n)
+{
+    uint32_t *key_gpu;
+    uint32_t *table_gpu;
+    para *hash_func_param_gpu;
+    
+    cudaMalloc(&key_gpu, n*sizeof(uint32_t));
+    cudaMalloc(&table_gpu, _size*sizeof(uint32_t));
+    cudaMalloc(&hash_func_param_gpu, _num_func*sizeof(para));
+
+
+    cudaMemcpy(key_gpu, key, n*sizeof(uint32_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(table_gpu, _table, _size*sizeof(uint32_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(hash_func_param_gpu, _hash_func_param, _num_func*sizeof(para),cudaMemcpyHostToDevice);
+
+    InsertKernel<<<ceil(n/BLOCK_SIZE), BLOCK_SIZE>>>(key_gpu, n, table_gpu, hash_func_param_gpu,
+                                                     _eviction_bound, _prime, _size, _num_func);
+
+    cudaMemcpy(_table, table_gpu, _size * sizeof(uint32_t), cudaMemcpyDeviceToHost);
+
+    cudaFree(key_gpu);
+    cudaFree(table_gpu);
+    cudaFree(hash_func_param_gpu);
+
+}
+
+
+void cuckoo_cuda::remove(uint32_t *key, int n)
+{
+    uint32_t *key_gpu;
+    uint32_t *table_gpu;
+    para *hash_func_param_gpu;
+
+    cudaMalloc(&key_gpu, n*sizeof(uint32_t));
+    cudaMalloc(&table_gpu, _size*sizeof(uint32_t));
+    cudaMalloc(&hash_func_param_gpu, _num_func*sizeof(para));
+
+
+    DeleteKernel<<<ceil(n/BLOCK_SIZE), BLOCK_SIZE>>> (key_gpu, n, table_gpu, hash_func_param_gpu,
+                                                        _prime, _size, _num_func);
+
+    cudaMemcpy(_table, table_gpu, _size * sizeof(uint32_t), cudaMemcpyDeviceToHost);
+
+    cudaFree(key_gpu);
+    cudaFree(table_gpu);
+    cudaFree(hash_func_param_gpu);
+
+
+}
+
+void cuckoo_cuda::look_up(uint32_t *key, int n, bool *result)
+{
+    uint32_t *key_gpu;
+    uint32_t *table_gpu;
+    para *hash_func_param_gpu;
+    bool *result_gpu;
+
+    cudaMalloc(&key_gpu, n*sizeof(uint32_t));
+    cudaMalloc(&table_gpu, _size*sizeof(uint32_t));
+    cudaMalloc(&hash_func_param_gpu, _num_func*sizeof(para));
+    cudaMalloc(&result_gpu, n*sizeof(bool));
+
+    LookupKernel<<<ceil(n/BLOCK_SIZE), BLOCK_SIZE>>> (key_gpu, n, table_gpu, hash_func_param_gpu,
+                                                     _prime, _size, _num_func, result_gpu);
+
+    cudaMemcpy(result, result_gpu, n*sizeof(bool), cudaMemcpyDeviceToHost);
+    
+    cudaFree(key_gpu);
+    cudaFree(table_gpu);
+    cudaFree(hash_func_param_gpu);
+    cudaFree(result_gpu);
+
 }
 
 __global__ void
-InsertKernel(uint32_t *keys, int n, uint32_t* &table, 
+InsertKernel(uint32_t *keys, int n, uint32_t* table, 
             para *hash_func_param, uint eviction_bound,
             uint32_t prime, uint size, uint num_func )
 {
@@ -125,9 +222,9 @@ InsertKernel(uint32_t *keys, int n, uint32_t* &table,
 }
 
 __global__ void
-LookupKernel(uint32_t *keys, int n, uint32_t* &table, 
+LookupKernel(uint32_t *keys, int n, uint32_t* table, 
             para *hash_func_param, uint32_t prime,
-             uint size, uint num_func,  bool *result)
+            uint size, uint num_func,  bool *result)
 {
     int idx = threadIdx.x + blockIdx.x * blockDim.x;
     if (idx < n)
@@ -150,9 +247,9 @@ LookupKernel(uint32_t *keys, int n, uint32_t* &table,
 }
 
 __global__ void
-DeleteKernel(uint32_t *keys, int n, uint32_t* &table, 
-    para *hash_func_param, uint32_t prime,
-     uint size, uint num_func,  bool *result)
+DeleteKernel(uint32_t *keys, int n, uint32_t* table, 
+            para *hash_func_param, uint32_t prime,
+            uint size, uint num_func)
 {
     int idx = threadIdx.x + blockIdx.x * blockDim.x;
     if(idx < n)
@@ -160,7 +257,7 @@ DeleteKernel(uint32_t *keys, int n, uint32_t* &table,
         uint32_t m_key = keys[idx];
         for (int i = 0; i < num_func; i++)
         {
-            param = hash_func_param[i];
+            para param = hash_func_param[i];
             uint data_index = hash_func(m_key, param, prime,size);
             uint32_t cur_key = extract_key(table[data_index]);
             if (m_key == cur_key)

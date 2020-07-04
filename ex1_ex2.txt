@@ -1,0 +1,378 @@
+-----------------Experiment1 Start-----------------
+############# 3 functions #############
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:10 Iter:0
+serial_time:0.115899 cuda_time:0.182453
+Datasize:10 Iter:1
+serial_time:0.112019 cuda_time:0.11072
+Datasize:10 Iter:2
+serial_time:0.113324 cuda_time:0.113547
+Datasize:10 Iter:3
+serial_time:0.116463 cuda_time:0.110914
+Datasize:10 Iter:4
+serial_time:0.110541 cuda_time:0.113932
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:11 Iter:0
+serial_time:0.112359 cuda_time:0.113063
+Datasize:11 Iter:1
+serial_time:0.113977 cuda_time:0.112283
+Datasize:11 Iter:2
+serial_time:0.111349 cuda_time:0.11299
+Datasize:11 Iter:3
+serial_time:0.113168 cuda_time:0.114934
+Datasize:11 Iter:4
+serial_time:0.114054 cuda_time:0.114203
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:12 Iter:0
+serial_time:0.108943 cuda_time:0.112581
+Datasize:12 Iter:1
+serial_time:0.111566 cuda_time:0.115027
+Datasize:12 Iter:2
+serial_time:0.114327 cuda_time:0.11285
+Datasize:12 Iter:3
+serial_time:0.112274 cuda_time:0.11396
+Datasize:12 Iter:4
+serial_time:0.112566 cuda_time:0.115924
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:13 Iter:0
+serial_time:0.11172 cuda_time:0.11313
+Datasize:13 Iter:1
+serial_time:0.113296 cuda_time:0.11258
+Datasize:13 Iter:2
+serial_time:0.113697 cuda_time:0.11673
+Datasize:13 Iter:3
+serial_time:0.114402 cuda_time:0.112548
+Datasize:13 Iter:4
+serial_time:0.111591 cuda_time:0.114966
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:14 Iter:0
+serial_time:0.116209 cuda_time:0.117047
+Datasize:14 Iter:1
+serial_time:0.124887 cuda_time:0.121171
+Datasize:14 Iter:2
+serial_time:0.118003 cuda_time:0.117076
+Datasize:14 Iter:3
+serial_time:0.122846 cuda_time:0.127363
+Datasize:14 Iter:4
+serial_time:0.120871 cuda_time:0.13866
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:15 Iter:0
+serial_time:0.123937 cuda_time:0.126533
+Datasize:15 Iter:1
+serial_time:0.123768 cuda_time:0.115349
+Datasize:15 Iter:2
+serial_time:0.127736 cuda_time:0.115792
+Datasize:15 Iter:3
+serial_time:0.130106 cuda_time:0.113326
+Datasize:15 Iter:4
+serial_time:0.122903 cuda_time:0.127252
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:16 Iter:0
+serial_time:0.121425 cuda_time:0.11958
+Datasize:16 Iter:1
+serial_time:0.132698 cuda_time:0.111047
+Datasize:16 Iter:2
+serial_time:0.128441 cuda_time:0.118836
+Datasize:16 Iter:3
+serial_time:0.126587 cuda_time:0.128329
+Datasize:16 Iter:4
+serial_time:0.129892 cuda_time:0.130735
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:17 Iter:0
+serial_time:0.130082 cuda_time:0.115271
+Datasize:17 Iter:1
+serial_time:0.137156 cuda_time:0.118178
+Datasize:17 Iter:2
+serial_time:0.137216 cuda_time:0.132336
+Datasize:17 Iter:3
+serial_time:0.131579 cuda_time:0.130209
+Datasize:17 Iter:4
+serial_time:0.147473 cuda_time:0.136215
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:18 Iter:0
+serial_time:0.166809 cuda_time:0.130759
+Datasize:18 Iter:1
+serial_time:0.164717 cuda_time:0.133954
+Datasize:18 Iter:2
+serial_time:0.167181 cuda_time:0.131386
+Datasize:18 Iter:3
+serial_time:0.161596 cuda_time:0.115818
+Datasize:18 Iter:4
+serial_time:0.148762 cuda_time:0.114894
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:19 Iter:0
+serial_time:0.208357 cuda_time:0.147843
+Datasize:19 Iter:1
+serial_time:0.226769 cuda_time:0.145135
+Datasize:19 Iter:2
+serial_time:0.209732 cuda_time:0.128212
+Datasize:19 Iter:3
+serial_time:0.215596 cuda_time:0.137407
+Datasize:19 Iter:4
+serial_time:0.20537 cuda_time:0.117567
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:20 Iter:0
+serial_time:0.294134 cuda_time:0.124126
+Datasize:20 Iter:1
+serial_time:0.293939 cuda_time:0.136498
+Datasize:20 Iter:2
+serial_time:0.312778 cuda_time:0.136087
+Datasize:20 Iter:3
+serial_time:0.317563 cuda_time:0.138294
+Datasize:20 Iter:4
+serial_time:0.295003 cuda_time:0.131616
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:21 Iter:0
+serial_time:0.465108 cuda_time:0.129852
+Datasize:21 Iter:1
+serial_time:0.481231 cuda_time:0.136063
+Datasize:21 Iter:2
+serial_time:0.448379 cuda_time:0.129314
+Datasize:21 Iter:3
+serial_time:0.448391 cuda_time:0.12195
+Datasize:21 Iter:4
+serial_time:0.440051 cuda_time:0.13312
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:22 Iter:0
+serial_time:0.858574 cuda_time:0.143827
+Datasize:22 Iter:1
+serial_time:0.782226 cuda_time:0.13086
+Datasize:22 Iter:2
+serial_time:0.79783 cuda_time:0.138432
+Datasize:22 Iter:3
+serial_time:0.830463 cuda_time:0.143793
+Datasize:22 Iter:4
+serial_time:0.816703 cuda_time:0.143236
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:23 Iter:0
+serial_time:1.64146 cuda_time:0.167881
+Datasize:23 Iter:1
+serial_time:1.67461 cuda_time:0.161222
+Datasize:23 Iter:2
+serial_time:1.48938 cuda_time:0.152204
+Datasize:23 Iter:3
+serial_time:1.45762 cuda_time:0.151073
+Datasize:23 Iter:4
+serial_time:1.461 cuda_time:0.153423
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:24 Iter:0
+serial_time:3.36964 cuda_time:0.232225
+Datasize:24 Iter:1
+serial_time:3.32364 cuda_time:0.227973
+Datasize:24 Iter:2
+serial_time:3.31593 cuda_time:0.226596
+Datasize:24 Iter:3
+serial_time:3.31359 cuda_time:0.228832
+Datasize:24 Iter:4
+serial_time:3.31188 cuda_time:0.226921
+%%%%%%%%%%%%%%%%%%%%%%%
+############# 4 functions #############
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:10 Iter:0
+serial_time:0.111954 cuda_time:0.113056
+Datasize:10 Iter:1
+serial_time:0.108129 cuda_time:0.112739
+Datasize:10 Iter:2
+serial_time:0.109427 cuda_time:0.112627
+Datasize:10 Iter:3
+serial_time:0.1086 cuda_time:0.109063
+Datasize:10 Iter:4
+serial_time:0.106054 cuda_time:0.108504
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:11 Iter:0
+serial_time:0.108624 cuda_time:0.109489
+Datasize:11 Iter:1
+serial_time:0.107651 cuda_time:0.112692
+Datasize:11 Iter:2
+serial_time:0.106008 cuda_time:0.109941
+Datasize:11 Iter:3
+serial_time:0.108903 cuda_time:0.114891
+Datasize:11 Iter:4
+serial_time:0.106459 cuda_time:0.113618
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:12 Iter:0
+serial_time:0.110699 cuda_time:0.113774
+Datasize:12 Iter:1
+serial_time:0.11538 cuda_time:0.113834
+Datasize:12 Iter:2
+serial_time:0.108042 cuda_time:0.113345
+Datasize:12 Iter:3
+serial_time:0.111433 cuda_time:0.111481
+Datasize:12 Iter:4
+serial_time:0.114378 cuda_time:0.111172
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:13 Iter:0
+serial_time:0.11146 cuda_time:0.111023
+Datasize:13 Iter:1
+serial_time:0.109749 cuda_time:0.111183
+Datasize:13 Iter:2
+serial_time:0.113543 cuda_time:0.112959
+Datasize:13 Iter:3
+serial_time:0.114653 cuda_time:0.110869
+Datasize:13 Iter:4
+serial_time:0.11038 cuda_time:0.112415
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:14 Iter:0
+serial_time:0.114261 cuda_time:0.111697
+Datasize:14 Iter:1
+serial_time:0.112177 cuda_time:0.113689
+Datasize:14 Iter:2
+serial_time:0.112898 cuda_time:0.112937
+Datasize:14 Iter:3
+serial_time:0.11248 cuda_time:0.111615
+Datasize:14 Iter:4
+serial_time:0.114304 cuda_time:0.113783
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:15 Iter:0
+serial_time:0.1186 cuda_time:0.114515
+Datasize:15 Iter:1
+serial_time:0.119328 cuda_time:0.112033
+Datasize:15 Iter:2
+serial_time:0.115167 cuda_time:0.113359
+Datasize:15 Iter:3
+serial_time:0.11927 cuda_time:0.11508
+Datasize:15 Iter:4
+serial_time:0.114896 cuda_time:0.112926
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:16 Iter:0
+serial_time:0.12442 cuda_time:0.113157
+Datasize:16 Iter:1
+serial_time:0.123789 cuda_time:0.120768
+Datasize:16 Iter:2
+serial_time:0.137622 cuda_time:0.123745
+Datasize:16 Iter:3
+serial_time:0.134231 cuda_time:0.114323
+Datasize:16 Iter:4
+serial_time:0.13921 cuda_time:0.114295
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:17 Iter:0
+serial_time:0.145116 cuda_time:0.126829
+Datasize:17 Iter:1
+serial_time:0.142526 cuda_time:0.122645
+Datasize:17 Iter:2
+serial_time:0.143616 cuda_time:0.118486
+Datasize:17 Iter:3
+serial_time:0.144428 cuda_time:0.118285
+Datasize:17 Iter:4
+serial_time:0.144868 cuda_time:0.11746
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:18 Iter:0
+serial_time:0.163758 cuda_time:0.116205
+Datasize:18 Iter:1
+serial_time:0.164724 cuda_time:0.114781
+Datasize:18 Iter:2
+serial_time:0.162461 cuda_time:0.116558
+Datasize:18 Iter:3
+serial_time:0.161576 cuda_time:0.114936
+Datasize:18 Iter:4
+serial_time:0.157205 cuda_time:0.114329
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:19 Iter:0
+serial_time:0.211287 cuda_time:0.117058
+Datasize:19 Iter:1
+serial_time:0.210943 cuda_time:0.111516
+Datasize:19 Iter:2
+serial_time:0.211167 cuda_time:0.118381
+Datasize:19 Iter:3
+serial_time:0.21033 cuda_time:0.114042
+Datasize:19 Iter:4
+serial_time:0.209187 cuda_time:0.116952
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:20 Iter:0
+serial_time:0.310136 cuda_time:0.11572
+Datasize:20 Iter:1
+serial_time:0.315719 cuda_time:0.124353
+Datasize:20 Iter:2
+serial_time:0.320727 cuda_time:0.128494
+Datasize:20 Iter:3
+serial_time:0.315061 cuda_time:0.117631
+Datasize:20 Iter:4
+serial_time:0.320816 cuda_time:0.123344
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:21 Iter:0
+serial_time:0.515352 cuda_time:0.120853
+Datasize:21 Iter:1
+serial_time:0.539364 cuda_time:0.124884
+Datasize:21 Iter:2
+serial_time:0.55784 cuda_time:0.124271
+Datasize:21 Iter:3
+serial_time:0.551311 cuda_time:0.129897
+Datasize:21 Iter:4
+serial_time:0.551037 cuda_time:0.135398
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:22 Iter:0
+serial_time:1.01454 cuda_time:0.14127
+Datasize:22 Iter:1
+serial_time:1.0668 cuda_time:0.145537
+Datasize:22 Iter:2
+serial_time:0.999765 cuda_time:0.133313
+Datasize:22 Iter:3
+serial_time:0.966375 cuda_time:0.145426
+Datasize:22 Iter:4
+serial_time:1.02518 cuda_time:0.156268
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:23 Iter:0
+serial_time:2.24051 cuda_time:0.168355
+Datasize:23 Iter:1
+serial_time:1.9993 cuda_time:0.150552
+Datasize:23 Iter:2
+serial_time:1.85319 cuda_time:0.146275
+Datasize:23 Iter:3
+serial_time:1.79984 cuda_time:0.14821
+Datasize:23 Iter:4
+serial_time:1.83155 cuda_time:0.154764
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+Datasize:24 Iter:0
+serial_time:4.10981 cuda_time:0.220049
+Datasize:24 Iter:1
+serial_time:4.0645 cuda_time:0.216207
+Datasize:24 Iter:2
+serial_time:4.00995 cuda_time:0.220032
+Datasize:24 Iter:3
+serial_time:3.98928 cuda_time:0.214753
+Datasize:24 Iter:4
+serial_time:3.95812 cuda_time:0.212953
+%%%%%%%%%%%%%%%%%%%%%%%
+-----------------Experiment1 End-----------------
+-----------------Experiment2 Start-----------------
+############# 3 functions #############
+serial_time:15.8151 cuda_time:0.119471
+serial_time:15.8294 cuda_time:0.130544
+serial_time:16.6794 cuda_time:0.120846
+serial_time:15.7109 cuda_time:0.132123
+serial_time:16.1825 cuda_time:0.123224
+############# 4 functions #############
+serial_time:20.8233 cuda_time:0.125357
+serial_time:19.2197 cuda_time:0.139773
+serial_time:18.6367 cuda_time:0.123487
+serial_time:18.8411 cuda_time:0.135143
+serial_time:18.5531 cuda_time:0.122137
+-----------------Experiment2 End-----------------

@@ -1,0 +1,311 @@
+-----------------Experiment3 Start-----------------
+############# 3 functions #############
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.1 iter:0]
+serial_time:17.4403 cuda_time:1.55196
+[scale:1.1 iter:1]
+serial_time:11.1889 cuda_time:1.48555
+[scale:1.1 iter:2]
+serial_time:9.99723 cuda_time:1.75001
+[scale:1.1 iter:3]
+serial_time:9.46739 cuda_time:1.49104
+[scale:1.1 iter:4]
+serial_time:9.60883 cuda_time:1.83976
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.2 iter:0]
+serial_time:5.73209 cuda_time:1.25318
+[scale:1.2 iter:1]
+serial_time:5.84529 cuda_time:1.25994
+[scale:1.2 iter:2]
+serial_time:5.67003 cuda_time:1.24246
+[scale:1.2 iter:3]
+serial_time:5.62925 cuda_time:1.26045
+[scale:1.2 iter:4]
+serial_time:5.80215 cuda_time:1.24468
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.3 iter:0]
+serial_time:4.77345 cuda_time:1.06246
+[scale:1.3 iter:1]
+serial_time:4.7363 cuda_time:1.02916
+[scale:1.3 iter:2]
+serial_time:5.18951 cuda_time:1.04406
+[scale:1.3 iter:3]
+serial_time:4.73781 cuda_time:1.04218
+[scale:1.3 iter:4]
+serial_time:4.7162 cuda_time:1.03784
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.4 iter:0]
+serial_time:4.19424 cuda_time:0.837945
+[scale:1.4 iter:1]
+serial_time:4.23582 cuda_time:0.835606
+[scale:1.4 iter:2]
+serial_time:4.23579 cuda_time:0.845589
+[scale:1.4 iter:3]
+serial_time:4.24295 cuda_time:0.837575
+[scale:1.4 iter:4]
+serial_time:4.26674 cuda_time:0.839294
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.5 iter:0]
+serial_time:3.94693 cuda_time:0.710468
+[scale:1.5 iter:1]
+serial_time:4.20227 cuda_time:1.01769
+[scale:1.5 iter:2]
+serial_time:3.94056 cuda_time:0.683672
+[scale:1.5 iter:3]
+serial_time:3.91237 cuda_time:0.674408
+[scale:1.5 iter:4]
+serial_time:3.92615 cuda_time:0.686201
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.6 iter:0]
+serial_time:3.80497 cuda_time:0.53865
+[scale:1.6 iter:1]
+serial_time:3.77965 cuda_time:0.537634
+[scale:1.6 iter:2]
+serial_time:3.82687 cuda_time:0.537629
+[scale:1.6 iter:3]
+serial_time:3.79716 cuda_time:0.530462
+[scale:1.6 iter:4]
+serial_time:3.75338 cuda_time:0.545902
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.7 iter:0]
+serial_time:3.68563 cuda_time:0.477626
+[scale:1.7 iter:1]
+serial_time:3.54417 cuda_time:0.428196
+[scale:1.7 iter:2]
+serial_time:3.53608 cuda_time:0.426622
+[scale:1.7 iter:3]
+serial_time:3.56749 cuda_time:0.431859
+[scale:1.7 iter:4]
+serial_time:3.59273 cuda_time:0.596257
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.8 iter:0]
+serial_time:3.57805 cuda_time:0.372225
+[scale:1.8 iter:1]
+serial_time:3.42395 cuda_time:0.386903
+[scale:1.8 iter:2]
+serial_time:3.42301 cuda_time:0.362349
+[scale:1.8 iter:3]
+serial_time:3.5462 cuda_time:0.378229
+[scale:1.8 iter:4]
+serial_time:3.40256 cuda_time:0.369052
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.9 iter:0]
+serial_time:3.54109 cuda_time:0.389556
+[scale:1.9 iter:1]
+serial_time:3.62008 cuda_time:0.324442
+[scale:1.9 iter:2]
+serial_time:3.43698 cuda_time:0.334026
+[scale:1.9 iter:3]
+serial_time:3.57715 cuda_time:0.372545
+[scale:1.9 iter:4]
+serial_time:3.46229 cuda_time:0.320902
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.01 iter:0]
+serial_time:34.3384 cuda_time:1.78616
+[scale:1.01 iter:1]
+serial_time:33.428 cuda_time:1.89927
+[scale:1.01 iter:2]
+serial_time:36.2183 cuda_time:1.97878
+[scale:1.01 iter:3]
+serial_time:34.0347 cuda_time:1.85428
+[scale:1.01 iter:4]
+serial_time:46.3913 cuda_time:1.79218
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.02 iter:0]
+serial_time:32.528 cuda_time:1.74173
+[scale:1.02 iter:1]
+serial_time:30.9223 cuda_time:1.75465
+[scale:1.02 iter:2]
+serial_time:31.1641 cuda_time:1.80903
+[scale:1.02 iter:3]
+serial_time:31.5462 cuda_time:1.74963
+[scale:1.02 iter:4]
+serial_time:31.2916 cuda_time:1.7414
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.03 iter:0]
+serial_time:27.9846 cuda_time:1.69318
+[scale:1.03 iter:1]
+serial_time:28.0473 cuda_time:1.73162
+[scale:1.03 iter:2]
+serial_time:28.5345 cuda_time:1.69492
+[scale:1.03 iter:3]
+serial_time:28.1187 cuda_time:1.80707
+[scale:1.03 iter:4]
+serial_time:29.6151 cuda_time:1.81593
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.04 iter:0]
+serial_time:25.0601 cuda_time:1.68866
+[scale:1.04 iter:1]
+serial_time:25.6059 cuda_time:1.7068
+[scale:1.04 iter:2]
+serial_time:25.0099 cuda_time:1.68095
+[scale:1.04 iter:3]
+serial_time:25.4613 cuda_time:1.72193
+[scale:1.04 iter:4]
+serial_time:25.4089 cuda_time:1.64499
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.05 iter:0]
+serial_time:21.8806 cuda_time:1.6432
+[scale:1.05 iter:1]
+serial_time:21.792 cuda_time:1.61871
+[scale:1.05 iter:2]
+serial_time:22.2675 cuda_time:1.60869
+[scale:1.05 iter:3]
+serial_time:22.9079 cuda_time:1.63177
+[scale:1.05 iter:4]
+serial_time:22.7014 cuda_time:1.64666
+############# 4 functions #############
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.1 iter:0]
+serial_time:6.81003 cuda_time:1.30738
+[scale:1.1 iter:1]
+serial_time:6.90688 cuda_time:1.22279
+[scale:1.1 iter:2]
+serial_time:6.98172 cuda_time:1.21342
+[scale:1.1 iter:3]
+serial_time:8.26923 cuda_time:1.32398
+[scale:1.1 iter:4]
+serial_time:6.78479 cuda_time:1.21203
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.2 iter:0]
+serial_time:5.67631 cuda_time:0.989286
+[scale:1.2 iter:1]
+serial_time:5.6866 cuda_time:1.05553
+[scale:1.2 iter:2]
+serial_time:5.96487 cuda_time:1.03596
+[scale:1.2 iter:3]
+serial_time:5.76636 cuda_time:1.05661
+[scale:1.2 iter:4]
+serial_time:5.82523 cuda_time:1.08087
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.3 iter:0]
+serial_time:5.14949 cuda_time:0.783235
+[scale:1.3 iter:1]
+serial_time:5.75759 cuda_time:0.787382
+[scale:1.3 iter:2]
+serial_time:5.10134 cuda_time:0.832531
+[scale:1.3 iter:3]
+serial_time:5.1233 cuda_time:0.791272
+[scale:1.3 iter:4]
+serial_time:5.12261 cuda_time:0.790601
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.4 iter:0]
+serial_time:4.73715 cuda_time:0.624825
+[scale:1.4 iter:1]
+serial_time:4.74115 cuda_time:0.618751
+[scale:1.4 iter:2]
+serial_time:4.75303 cuda_time:0.615382
+[scale:1.4 iter:3]
+serial_time:5.0281 cuda_time:0.61919
+[scale:1.4 iter:4]
+serial_time:4.75655 cuda_time:0.615542
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.5 iter:0]
+serial_time:4.42187 cuda_time:0.477135
+[scale:1.5 iter:1]
+serial_time:4.44835 cuda_time:0.479571
+[scale:1.5 iter:2]
+serial_time:4.44487 cuda_time:0.473972
+[scale:1.5 iter:3]
+serial_time:4.40572 cuda_time:0.598566
+[scale:1.5 iter:4]
+serial_time:4.45545 cuda_time:0.484905
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.6 iter:0]
+serial_time:4.50676 cuda_time:0.403679
+[scale:1.6 iter:1]
+serial_time:4.58311 cuda_time:0.415068
+[scale:1.6 iter:2]
+serial_time:4.62515 cuda_time:0.384541
+[scale:1.6 iter:3]
+serial_time:4.33477 cuda_time:0.376893
+[scale:1.6 iter:4]
+serial_time:4.25684 cuda_time:0.401238
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.7 iter:0]
+serial_time:4.23073 cuda_time:0.330305
+[scale:1.7 iter:1]
+serial_time:4.21978 cuda_time:0.345151
+[scale:1.7 iter:2]
+serial_time:4.40262 cuda_time:0.329306
+[scale:1.7 iter:3]
+serial_time:4.26292 cuda_time:0.327291
+[scale:1.7 iter:4]
+serial_time:4.12736 cuda_time:0.332963
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.8 iter:0]
+serial_time:3.96759 cuda_time:0.356155
+[scale:1.8 iter:1]
+serial_time:4.04533 cuda_time:0.298559
+[scale:1.8 iter:2]
+serial_time:3.98219 cuda_time:0.278869
+[scale:1.8 iter:3]
+serial_time:4.03565 cuda_time:0.303391
+[scale:1.8 iter:4]
+serial_time:4.00872 cuda_time:0.280961
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.9 iter:0]
+serial_time:3.98497 cuda_time:0.264539
+[scale:1.9 iter:1]
+serial_time:3.92558 cuda_time:0.263811
+[scale:1.9 iter:2]
+serial_time:3.90662 cuda_time:0.26695
+[scale:1.9 iter:3]
+serial_time:4.05395 cuda_time:0.285048
+[scale:1.9 iter:4]
+serial_time:4.3565 cuda_time:0.290986
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.01 iter:0]
+serial_time:13.4176 cuda_time:1.5181
+[scale:1.01 iter:1]
+serial_time:13.3148 cuda_time:1.53455
+[scale:1.01 iter:2]
+serial_time:13.1549 cuda_time:1.53868
+[scale:1.01 iter:3]
+serial_time:13.1735 cuda_time:1.53059
+[scale:1.01 iter:4]
+serial_time:13.8403 cuda_time:1.59485
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.02 iter:0]
+serial_time:11.5737 cuda_time:1.55018
+[scale:1.02 iter:1]
+serial_time:11.4223 cuda_time:1.52457
+[scale:1.02 iter:2]
+serial_time:11.1716 cuda_time:1.51304
+[scale:1.02 iter:3]
+serial_time:11.733 cuda_time:1.46872
+[scale:1.02 iter:4]
+serial_time:10.9434 cuda_time:1.4758
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.03 iter:0]
+serial_time:9.56294 cuda_time:1.42203
+[scale:1.03 iter:1]
+serial_time:10.313 cuda_time:2.13139
+[scale:1.03 iter:2]
+serial_time:9.57701 cuda_time:1.45881
+[scale:1.03 iter:3]
+serial_time:10.2557 cuda_time:1.42903
+[scale:1.03 iter:4]
+serial_time:10.4701 cuda_time:1.42623
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.04 iter:0]
+serial_time:9.25252 cuda_time:1.38172
+[scale:1.04 iter:1]
+serial_time:8.73391 cuda_time:1.37402
+[scale:1.04 iter:2]
+serial_time:8.82531 cuda_time:1.53909
+[scale:1.04 iter:3]
+serial_time:8.73278 cuda_time:1.37226
+[scale:1.04 iter:4]
+serial_time:8.86762 cuda_time:1.3894
+%%%%%%%%%%%%%%%%%%%%%%%
+[scale:1.05 iter:0]
+serial_time:8.17605 cuda_time:1.34122
+[scale:1.05 iter:1]
+serial_time:8.17 cuda_time:1.3414
+[scale:1.05 iter:2]
+serial_time:8.22511 cuda_time:1.34614
+[scale:1.05 iter:3]
+serial_time:8.21026 cuda_time:1.34842
+[scale:1.05 iter:4]
+serial_time:8.18681 cuda_time:1.34362

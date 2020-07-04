@@ -31,7 +31,7 @@ private:
     para *_hash_func_param; // Store all the divisors. As the form of hash function we use is:  ((a*key+b) mod prime) mod size
 
     uint _eviction_bound;     // When the chain's length reaches evication bound, rebuid the hash table
-    uint32_t _prime = 230038579;
+    uint32_t _prime = 50331653;
 
 private:
 
@@ -44,7 +44,6 @@ private:
     */
     uint hash_func(uint32_t key, para parameter)
     {
-        //return ((key ^ parameter.a) >> parameter.b) % _size;
         return ((key * parameter.a + parameter.b) % _prime) % _size ;
     }
 
@@ -56,20 +55,6 @@ private:
             _hash_func_param[i].a = rnd() % _prime;
             _hash_func_param[i].b = rnd() % _prime;
             //std::cout << _hash_func_param[i].a << " " << _hash_func_param[i].b << std::endl;
-        }
-    }
-    void gen_hash_funcs() {
-
-        // Calculate bit width of value range and table size.
-        int val_width = 8 * sizeof(uint32_t) - ceil(log2((double) _num_func));
-        int size_width = ceil(log2((double) _size));
-
-        // Generate randomized configurations.
-        for (int i = 1; i <= _num_func; ++i) {     // At index 0 is a dummy function.
-            if (val_width <= size_width)
-                _hash_func_param[i] = {rand(), 0};
-            else
-                _hash_func_param[i] = {rand(), rand() % (val_width - size_width + 1)};
         }
     }
  
@@ -89,9 +74,8 @@ cuckoo_serial::cuckoo_serial(const uint size, uint num_func): _size(size), _num_
 {
     _table = new entry[size](); 
     _hash_func_param = new para[num_func]();
-    //gen_hash_funcs();
     gen_hash_divisor();
-    _eviction_bound = 4 * ceil(log2(size));
+    _eviction_bound = 10 * ceil(log2(size));
 }
 
 
@@ -124,17 +108,7 @@ void cuckoo_serial::insert(uint32_t key)
     uint chain_count = 0;
     while (chain_count < _eviction_bound)
     {
-        // for (int i = 0 ; i < _num_func; i++)
-        // {
-        //     para param = _hash_func_param[i];
-        //     uint data_index = hash_func(key, param);
-        //     if (_table[data_index].data == 0 )
-        //     {
-        //         _table[data_index].data = key;
-        //         _table[data_index].cur_hash_index = i;
-        //         return;
-        //     }
-        // }
+
         if (_table[data_index].data == 0)
         {
             _table[data_index].data = key;
@@ -159,22 +133,10 @@ void cuckoo_serial::insert(uint32_t key)
             data_index = hash_func(key, param);
         }
 
-        // para param = _hash_func_param[hash_index];
-        // uint data_index = hash_func(key,param);
-
-        // uint32_t evict_key = _table[data_index].data;
-        // uint evict_hash_index = _table[data_index].cur_hash_index;
-
-        // _table[data_index].data = key;
-        // _table[data_index].cur_hash_index = hash_index;
-
-        // key = evict_key;
-        // hash_index = (evict_hash_index + 1) % _num_func;
-
         chain_count++;
     }
 
-    std::cout << chain_count << std::endl;
+    //std::cout << chain_count << std::endl;
     //rebuild_table(key);
 
 }
