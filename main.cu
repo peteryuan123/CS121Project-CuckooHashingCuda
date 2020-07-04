@@ -8,6 +8,7 @@ uint32_t TABLE_SIZE = 0x1 << 25;
 uint32_t DATA_LIMIT = 0x1 << 29;
 using namespace std::chrono;
 
+// Generate random data of size items
 void gen_random_data(uint32_t*& S, int size)
 {
 

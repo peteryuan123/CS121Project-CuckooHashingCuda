@@ -47,7 +47,7 @@ private:
         return ((key * parameter.a + parameter.b) % _prime) % _size ;
     }
 
-    // Re-generate new divisior
+    // Re-generate new parameter
     void gen_hash_divisor()
     {
         for (uint i = 0; i < _num_func; i++)
@@ -108,7 +108,7 @@ void cuckoo_serial::insert(uint32_t key)
     uint chain_count = 0;
     while (chain_count < _eviction_bound)
     {
-
+        // If empty, store it
         if (_table[data_index].data == 0)
         {
             _table[data_index].data = key;
@@ -118,14 +118,15 @@ void cuckoo_serial::insert(uint32_t key)
         
         else
         {
-
+            // Store the evicted key temporily
             uint32_t evict_key = _table[data_index].data;
             uint evict_hash_index = _table[data_index].cur_hash_index;
 
-
+            // Evict
             _table[data_index].data = key;
             _table[data_index].cur_hash_index = hash_index;
 
+            // Update the value and re-insert
             key = evict_key;
             hash_index = (evict_hash_index + 1) % _num_func;  
 
@@ -202,9 +203,9 @@ void cuckoo_serial::show_table()
     }
 }
 
+// Not used
 void cuckoo_serial::rebuild_table(uint32_t key)
 {
-    //gen_hash_funcs();
     gen_hash_divisor();
 
     std::vector<uint32_t> temp_data;

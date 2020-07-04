@@ -5,7 +5,9 @@
 #include"util.h"
 
 #define BLOCK_SIZE 512
-
+//------------------------------------------------------------------------------
+// This part is to compress the node into uint32_t
+// Use 30 bits in the left to store key and use 2 bits in the right to store func_index                          
 __device__ uint32_t 
 compress_data(uint32_t key, uint func_index)
 {
@@ -23,13 +25,17 @@ extract_func_idx(uint32_t compressed_data)
 {
     return compressed_data & 0b11;
 }
+//------------------------------------------------------------------------------
 
+// Have to move hash_func algorithm outside the class
 __device__ uint 
 hash_func(uint32_t key, para parameter, uint32_t prime, uint size)
 {
     //return ((key ^ parameter.a) >> parameter.b) % _size;
     return ((key * parameter.a + parameter.b) % prime) % size ;
 }
+
+
 __global__ void
 InsertKernel(uint32_t *keys, int n, uint32_t* table, 
             para *hash_func_param, uint eviction_bound,
@@ -53,7 +59,7 @@ private:
     const uint _size;         // Size of the hash table
     uint _num_func;           // Number of hash functions
     uint32_t* _table;         // Data
-    para *_hash_func_param; // Store all the divisors. As the form of hash function we use is:  ((a*key+b) mod prime) mod size
+    para *_hash_func_param;    // Store all the parameter. As the form of hash function we use is:  ((a*key+b) mod prime) mod size
 
     uint _eviction_bound;     // When the chain's length reaches evication bound, rebuid the hash table
     uint32_t _prime = 35003489;
@@ -69,7 +75,6 @@ private:
     */
     uint hash_func(uint32_t key, para parameter)
     {
-        //return ((key ^ parameter.a) >> parameter.b) % _size;
         return ((key * parameter.a + parameter.b) % _prime) % _size ;
     }
 
@@ -99,7 +104,7 @@ public:
 
 
 
-
+// Initialize
 cuckoo_cuda::cuckoo_cuda(const uint size, uint num_func): _size(size), _num_func(num_func)
 {
     _hash_func_param = new para[num_func];
@@ -113,6 +118,7 @@ cuckoo_cuda::~cuckoo_cuda()
     delete[] _hash_func_param;
     delete[] _table;
 }
+
 
 void cuckoo_cuda::insert(uint32_t *key, int n)
 {
@@ -206,6 +212,7 @@ InsertKernel(uint32_t *keys, int n, uint32_t* table,
             uint data_index = hash_func(m_key, param, prime, size);
 
             uint32_t compressed_data =  compress_data(m_key, hash_index);
+            // use atomicExch to avoid interference
             uint32_t old = atomicExch(&table[data_index], compressed_data);
             if (old == 0)
                 return;
