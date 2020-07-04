@@ -11,8 +11,7 @@
 
 #define DIVISOR_BOUND 50    // Divisor should be in range 0-50
 
-std::random_device rd;
-std::mt19937 rnd(rd());
+
 
 
 /*  
@@ -61,7 +60,7 @@ private:
 
 public:
 
-    cuckoo_serial(const uint size,uint num_func);
+    cuckoo_serial(const uint size, uint num_func, uint evivtion_bound);
     ~cuckoo_serial();
 
     void insert(uint32_t key);
@@ -70,12 +69,13 @@ public:
     void show_table();
 };
 
-cuckoo_serial::cuckoo_serial(const uint size, uint num_func): _size(size), _num_func(num_func)
+cuckoo_serial::cuckoo_serial(const uint size, uint num_func, uint evivtion_bound)
+:_size(size), _num_func(num_func), _eviction_bound(evivtion_bound)
 {
     _table = new entry[size](); 
     _hash_func_param = new para[num_func]();
     gen_hash_divisor();
-    _eviction_bound = 10 * ceil(log2(size));
+    //_eviction_bound = 10 * ceil(log2(size));
 }
 
 
@@ -137,6 +137,10 @@ void cuckoo_serial::insert(uint32_t key)
         chain_count++;
     }
 
+    // Since no rehash, we give a penalty if it needs rehash
+    int penalty = 0;
+    while (penalty < 400)
+        penalty++;
     //std::cout << chain_count << std::endl;
     //rebuild_table(key);
 

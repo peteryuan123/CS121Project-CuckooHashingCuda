@@ -93,7 +93,7 @@ private:
 
 public:
 
-    cuckoo_cuda(const uint size,uint num_func);
+    cuckoo_cuda(const uint size,uint num_func, uint eviction_bound);
     ~cuckoo_cuda();
 
     void insert(uint32_t *key, int n);
@@ -105,12 +105,13 @@ public:
 
 
 // Initialize
-cuckoo_cuda::cuckoo_cuda(const uint size, uint num_func): _size(size), _num_func(num_func)
+cuckoo_cuda::cuckoo_cuda(const uint size, uint num_func, uint eviction_bound)
+:_size(size), _num_func(num_func), _eviction_bound(eviction_bound)
 {
     _hash_func_param = new para[num_func];
     _table = new uint32_t[size];
     gen_hash_divisor();
-    _eviction_bound = 10 * ceil(log2(size));
+    //_eviction_bound = 10 * ceil(log2(size));
 }
 
 cuckoo_cuda::~cuckoo_cuda()
@@ -211,7 +212,7 @@ InsertKernel(uint32_t *keys, int n, uint32_t* table,
             para param = hash_func_param[hash_index];
             uint data_index = hash_func(m_key, param, prime, size);
 
-            uint32_t compressed_data =  compress_data(m_key, hash_index);
+            uint32_t compressed_data = compress_data(m_key, hash_index);
             // use atomicExch to avoid interference
             uint32_t old = atomicExch(&table[data_index], compressed_data);
             if (old == 0)
@@ -223,6 +224,10 @@ InsertKernel(uint32_t *keys, int n, uint32_t* table,
                 chain_count++;
             }
         }
+        // Since no rehash, we give a penalty if it needs rehash
+        int penalty = 0;
+        while (penalty < 400)
+            penalty++;
     }
 
 

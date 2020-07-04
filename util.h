@@ -3,6 +3,9 @@
 
 #include<iostream>
 
+std::random_device rd;
+std::mt19937 rnd(rd());
+
 struct para
 {
     int a;
